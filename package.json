@@ -1,0 +1,55 @@
+{
+  "name": "dsh-restart-button",
+  "version": "0.2.0",
+  "private": true,
+  "description": "在 DeepSeek Harness 桌面端侧边栏底栏（设置齿轮左侧）添加一个「重启」按钮：一键强制关闭 Harness 全部进程并重新打开。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "restart"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xyvanlabs/dsh-restart-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Xyvanlabs/dsh-restart-button/issues"
+  },
+  "homepage": "https://github.com/Xyvanlabs/dsh-restart-button#readme",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json",
+    "./icon": "./icon.svg"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.1.1-rc.2 <0.3.0"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "docs",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT"
+}

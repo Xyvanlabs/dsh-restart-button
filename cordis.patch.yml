@@ -1,0 +1,6 @@
+# dsh-restart-button bundle patch: adds the restart-button row to the profile roster.
+# The row name resolves from the profile's own node_modules, where
+# `dsh plugin --profile desktop add link:<this package>` installed it.
+- insert:
+    - id: restart-button
+      name: dsh-restart-button
